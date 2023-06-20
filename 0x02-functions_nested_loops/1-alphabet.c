@@ -7,7 +7,7 @@
 
 
 	void print_alphabet(void)
-	{
+{
 		char letter;
 
 
@@ -16,4 +16,4 @@
 
 
 		_putchar('\n');
-	}
+}
