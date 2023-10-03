@@ -5,7 +5,7 @@
  * @filename: name of the file to create
  * @text_content: text to write
  * 
- * Return: If the function fails - 0
+ * Return: If the function fails - -1
  *         Otherwise - 1
  */
 int create_file(const char *filename, char *text_content)
@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	int fd, w, len = 0;
 
 	if (filename == NULL)
-		return (0);
+		return (-1);
 
 	if (text_content != NULL)
 	{
@@ -25,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	w = write(fd, text_content, len);
 
 	if (fd == -1 || w == -1)
-		return (0);
+		return (-1);
 
 	close(fd);
 
